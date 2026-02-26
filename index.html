@@ -6,68 +6,110 @@
   <title>Gallery - Web Design 2</title>
 
   <style>
-    :root {
-      --bg: #000;
-      --text: #ffffff;
+  :root {
+    --bg: #000;
+    --text: #ffffff;
 
-      --c1: #FD644B;
-      --c2: #FC8E54;
-      --c3: #FCBC5D;
-      --c4: #FCE366;
-      --c5: #D8FB67;
-      --c6: #A6CC9C;
-      --c7: #7AA3CB;
-      --c8: #4D79FB;
+    --c1: #FD644B;
+    --c2: #FC8E54;
+    --c3: #FCBC5D;
+    --c4: #FCE366;
+    --c5: #D8FB67;
+    --c6: #A6CC9C;
+    --c7: #7AA3CB;
+    --c8: #4D79FB;
+
+    --duration: 3s;
+    --delay-step: 0.18s;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .gallery {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .ascii-art {
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  /* Base rainbow colors */
+  .row1 { color: var(--c1); }
+  .row2 { color: var(--c2); }
+  .row3 { color: var(--c3); }
+  .row4 { color: var(--c4); }
+  .row5 { color: var(--c5); }
+  .row6 { color: var(--c6); }
+  .row7 { color: var(--c7); }
+  .row8 { color: var(--c8); }
+
+  /* Downward wave animation */
+  .row1,
+  .row2,
+  .row3,
+  .row4,
+  .row5,
+  .row6,
+  .row7,
+  .row8 {
+    animation: wave var(--duration) ease-in-out infinite;
+  }
+
+  .row1 { animation-delay: calc(var(--delay-step) * 0); }
+  .row2 { animation-delay: calc(var(--delay-step) * 1); }
+  .row3 { animation-delay: calc(var(--delay-step) * 2); }
+  .row4 { animation-delay: calc(var(--delay-step) * 3); }
+  .row5 { animation-delay: calc(var(--delay-step) * 4); }
+  .row6 { animation-delay: calc(var(--delay-step) * 5); }
+  .row7 { animation-delay: calc(var(--delay-step) * 6); }
+  .row8 { animation-delay: calc(var(--delay-step) * 7); }
+
+  @keyframes wave {
+    0% {
+      filter: brightness(1);
+      text-shadow: 0 0 0px currentColor;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    40% {
+      filter: brightness(1.6);
+      text-shadow: 0 0 14px currentColor;
     }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Courier New", monospace;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    80% {
+      filter: brightness(1);
+      text-shadow: 0 0 0px currentColor;
     }
-
-    .gallery {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem;
+    100% {
+      filter: brightness(1);
     }
+  }
 
-    .ascii-art {
-      text-align: center;
-      font-size: 10px;
-      line-height: 1.2;
-    }
-
-    .row1 { color: var(--c1); }
-    .row2 { color: var(--c2); }
-    .row3 { color: var(--c3); }
-    .row4 { color: var(--c4); }
-    .row5 { color: var(--c5); }
-    .row6 { color: var(--c6); }
-    .row7 { color: var(--c7); }
-    .row8 { color: var(--c8); }
-
-    .site-footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 12px;
-      opacity: 0.6;
-      border-top: 1px solid #111;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      letter-spacing: 0.5px;
-    }
-  </style>
+  .site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 12px;
+    opacity: 0.6;
+    border-top: 1px solid #111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+</style>
 </head>    
   <body>
 
