@@ -1,0 +1,38 @@
+body {
+  font-family: system-ui;
+  background: #000;
+  color: white;
+  text-align: left  ;
+}
+
+.row1 {
+  color: #FD644B;
+}
+
+.row2 {
+  color: #FC8E54;
+}
+
+.row3 {
+  color: #FCBC5D;
+}
+
+.row4 {
+  color: #fce366;
+}
+
+.row5 {
+  color: #D8FB67;
+}
+
+.row6 {
+  color: #A6CC9C;
+}
+
+.row7 {
+  color: #7AA3CB;
+}
+
+.row8 {
+  color: #4D79FB;
+}
