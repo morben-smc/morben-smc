@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Web Design 2 Project</title>
-    <link rel="stylesheet" href="./style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>ASCII Art Gallery</title>
 
-  </head>
-    
+  <style>
+    :root {
+      --bg: #000;
+      --text: #ffffff;
+
+      --c1: #FD644B;
+      --c2: #FC8E54;
+      --c3: #FCBC5D;
+      --c4: #FCE366;
+      --c5: #D8FB67;
+      --c6: #A6CC9C;
+      --c7: #7AA3CB;
+      --c8: #4D79FB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Courier New", monospace;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .gallery {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+    }
+
+    .ascii-art {
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.2;
+    }
+
+    .row1 { color: var(--c1); }
+    .row2 { color: var(--c2); }
+    .row3 { color: var(--c3); }
+    .row4 { color: var(--c4); }
+    .row5 { color: var(--c5); }
+    .row6 { color: var(--c6); }
+    .row7 { color: var(--c7); }
+    .row8 { color: var(--c8); }
+
+    .site-footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 12px;
+      opacity: 0.6;
+      border-top: 1px solid #111;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>    
   <body>
 
   <main class="gallery">
